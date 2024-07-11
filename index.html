@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- fontlink -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!--fontlink-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!--icon link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="bg-color">
+ <div class="section-main-contatiner">
+    <div class="container-fluid  ">
+        <div class="row bg-color">
+
+            <div class="side-bar-flex col-2 ">
+
+                <div class="side-bar-head">
+                    <h2 class="margin-const  side-bar-head-contant">Employee </h2>
+                    <span>Management</span>
+                </div>
+
+
+                <div class="side-bar-nav-menu-bar">
+
+                    <ul>
+
+                        <li><a href="#"><i class="fa-solid fa-house"></i>Dashboard</a></li>
+                        <li><a href="#"><i class="fa-solid fa-chart-simple"></i>Employees</a></li>
+                        <li><a href="#"><i class="fa-solid fa-user"></i>My Profile</a></li>
+                        <li><a href="#"><i class="fa-solid fa-lock"></i>Logout</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="company-brand-name">
+                    <h5 class="margin-const">Powered by</h5>
+                    <img src="image/image 1 (1).png" alt="">
+
+                </div>
+
+            </div>
+
+
+            <!--section--------------->
+
+            <div class="main-page-sec col-10  pb-4 ">
+
+                         <div class="main-page-banner-head-flex d-flex  justify-content-between pb-4">
+  
+                        <div class="mp-banner-head">
+                        <h6 class="margin-const">Dashboard / Employees</h6>
+                        <h1 class="margin-const">Employees</h1>
+                         </div>
+
+
+                      <div class="main-page-banner-search-input d-flex">
+
+                        <div> <input type="text" placeholder=" Search" id="search-item"  onkeyup="search()">
+                        </div>
+
+                       
+                        <div class="ava-image">
+                            <img src="image/Elipse 5.png" alt="">
+                        </div>
+
+                      </div>
+                      </div>
+
+
+
+
+                       <div class="card border-maincard ">
+
+                        <div class="card-body cr ">
+
+                            <div class="f-s-o-flex">
+                                <div class=" f-s-o">
+                                    <h3 class="margin-const">Employees List</h3>
+                                    <form action="" class="p-3 " id="of10" >
+                                        <label for="cars"></label>
+                                        <select name="" id="page_value" class="p-2 ">
+                                          <option  value="1">1</option>
+                                          <option value="2">2</option>
+                                          <option value="3">3</option>
+                                          <option  value="4">4</option>
+                                          <option  selected value="5">5</option>
+                                         
+                                        </select>
+                                        <br><br>
+                                         
+                                         <span id="count-value">of 10</span>
+                                      </form>
+    
+
+                                </div>
+
+                               
+
+
+                                <div><button type="button" class="btn btn-primary btn-lg addemployee-form-btn">Add Employee</button></div>
+                            </div>
+
+                            <div class="table-head-flex">
+
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Sl.No <i class="fa-solid fa-caret-down"></i></th>
+                                            <th scope="col">Name <i class="fa-solid fa-caret-down"></i></th>
+                                            <th scope="col">Email <i class="fa-solid fa-caret-down"></i></th>
+                                            <th scope="col">Phone <i class="fa-solid fa-caret-down"></i></th>
+                                            <th scope="=col">Gender <i class="fa-solid fa-caret-down"></i></th>
+                                            <th scope="col">DOB<i class="fa-solid fa-caret-down"></i></th>
+                                            <th scope="col">Country <i class="fa-solid fa-caret-down"></i></th>
+                                          
+                                        </tr>
+                                    </thead>
+                                    <tbody id="table-body">
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                        
+                      </div>
+ 
+                   
+                     <div class="pagination-flex">
+                        <nav aria-label="Page navigation example">
+                            <ul id="pagination">
+                             
+                            </ul>
+                          </nav>
+                     </div>
+                   
+                      <div class="bottom-footer">
+                         <h6 class="margin-const">© 2023  All Rights Reserved. Stackup</h6>
+
+                         <div class="bottom-footer-link">
+                          
+                            <h6 class="margin-const">Terms of Use</h6>
+                            <h6 class="margin-const">Privacy Policy</h6>
+
+                         </div>
+                      </div>
+
+
+
+                      
+                       
+            </div>
+      
+    </div>
+
+    
+   </div>
+
+   <!-- //// -->
+
+
+   
+
+   <div class="bottom-footer">
+    <h6>© 2023  All Rights Reserved. Stackup</h6>
+ </div>
+
+
+
+
+</div>
+
+  <div class="add-form">
+   <form action="" class="form-radius" >
+     <div class="card card-radius card_hight ">
+        <div class="card-header bg-white border-bottom-0 pt-4 d-flex justify-content-between">
+            <h3 class="header-common">Add Employee</h3>
+            <button type="button" class="btn into-btn addempoyecancel-form-btn"><i class="fa-sharp fa-solid fa-xmark"></i></button>
+        </div>
+
+  
+        <div class="card-body">
+
+
+            <div class="upload-img mb-3 ">
+                <label for="input-file" class="l-form " >
+                    <!-- <i class="fa-solid fa-upload "></i> -->
+                    <img src="image/download (4).jpg" alt="" id="profile-pic" >    
+                    <h4 class="h4-common text-center margin-const">Upload Image</h4>
+                    <h6 class="common-h6 text-center margin-const">PNG, JPG files are allowed</h6>
+                </label>
+                <input type="file" id="input-file" accept="image/jpeg, image/png image/jpg " class="upload-img-d">
+                <p class="img-msg msg"></p>
+            </div>
+
+            <div class="row ">
+
+                <div class="col-5 col-lg-4 	col-md-4  col-sm-4 mb-1 ">
+                    <label for="inputSalutation" class="form-label">Salutation</label>
+                    <select class="form-select" aria-label="Default select example " id="inputSalutation">
+                        <option selected aria-placeholder="select"></option>
+                
+                        <option value="Mr">Mr</option>
+                        <option value="Dr">Dr</option>
+                        <option value="Ms">Ms</option>
+                    </select>
+                    <p class="salutation-msg msg"></p>
+                </div>
+
+                <div class="col-7 col-lg-4 col-md-4 col-sm-8 ">
+                    <label for="inputFirstname" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="inputFirstname" placeholder="john">
+                    <p class="fristname-msg msg"></p>
+                </div>
+
+                <div class="col-12 col-lg-4 	col-md-4 mb-1">
+                    <label for="inputLastname" class="form-label">LastName</label>
+                    <input type="text" class="form-control" id="inputLastname" placeholder="doe ">
+                    <p class="lastname-msg msg"></p>
+                </div>
+
+            </div>
+
+
+            <div class=" row mb-3">
+                <div class="col-12 col-lg-6  col-md-6 col-sm-6 mb-1">
+                    <label for="inputEmail" class="form-label">Email Address </label>
+                    <input type="email" class="form-control" id="inputEmail"
+                        placeholder="mail@simmmple.com">
+                        <p class="email-msg msg"></p>
+                </div>
+
+                <div class="col-12 col-lg-6  col-md-6  col-sm-6">
+                    <label for="inputMobile" class="form-label">Mobile Number </label>
+                    <input type="number" class="form-control" id="inputMobile"
+                        placeholder="enter mobile number">
+                        <p class="phone-msg msg"></p>
+                </div>
+            </div>
+
+
+            <div class="row mb-3">
+                <div class="col-12 col-lg-6  col-md-6  col-sm-6 mb-1">
+                    <label for="inputdateofbirth" class="form-label">Date of Birth </label>
+                    <input type="date" class="form-control" id="inputdateofbirth"
+                        placeholder="select date of birth">
+                        <p class="dob-msg msg"></p>
+
+                </div>
+
+
+
+                <div class="col-12 col-lg-6  col-md-6 col-sm-6">
+
+                    <label for="" class="form-label">Gender</label>
+
+                    <div class="row ">
+
+                        <div class="col  p-2 d-flex gap-2">
+                           
+                            <div> <input  value="male" class="form-check-input" type="radio" name="gender"
+                                    id="radiomale">
+                                <label class="form-check-label" for="radiomale" > Male</label>
+                            </div>
+
+                            <div> <input   value="female" class="form-check-input" type="radio" name="gender"
+                                    id="radiofemale">
+                                <label class="form-check-label" for="radiofemale"  > female</label>
+                            </div>
+                            <p class="gender-msg msg"></p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+                
+            <div class="row">
+                  <div class="col">
+                    <label for="inputquali" class="form-label">Qualifications </label>
+                    <input type="text" class="form-control" id="inputquali" placeholder="enter address">
+                    <p class="Qualifications-msg msg"></p>
+                </div>
+
+            </div>
+
+            <div class="row mb-3">
+
+                <div class="col">
+                    <label for="inputaddress " class="form-label">Address </label>
+                    <input type="text" class="form-control" id="inputaddress" placeholder="enter address">
+                    <p class="address-msg msg"></p>
+                </div>
+
+            </div>
+
+
+
+            <div class="row mb-3">
+
+                <div class="col-12 col-lg-6   col-md-6  col-sm-6 ">
+                    <label for="select_country" class="form-label">Country </label>
+                    <select class="form-select" aria-label="Default select example " id="select_country">
+                        <option selected>select country</option>
+                    
+                        <option value="india">india</option>
+                        <option value="uk">uk</option>
+                        <option value="uae">uae</option>
+                    </select>
+                    <p class="country-msg msg"></p>
+                </div>
+
+                <div class="col-12 col-lg-6   col-md-6  col-sm-6">
+                    <label for="select_state" class="form-label ">State </label>
+                    <select class="form-select" aria-label="Default select example " id="select_state">
+                        <option selected class="">select state</option>
+                   
+                        <option value="Tamilnadu">Tamilnadu</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="delhi">Delhi</option>
+                    </select>
+                    <p class="state-msg msg"></p>
+                </div>
+
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12 col-lg-6  col-md-6 col-sm-6 mb-1">
+                    <label for="inputcity" class="form-label">City</label>
+                    <input type="text" class="form-control" id="inputcity" placeholder="enter city">
+                    <p class="city-msg msg"></p>
+                </div>
+
+                <div class=" col-lg-6  col-md-6 col-sm-6">
+
+                    <label for="inputpin" class="form-label">Pin/Zip </label>
+                    <input type="number" class="form-control" id="inputpin" placeholder="enter zip/pin">
+                    <p class="pin-msg msg"></p>
+                </div>
+            </div>
+            <div class=" row mb-3">
+                <div class="col-12 col-lg-6  col-md-6 col-sm-6 mb-1">
+                    <label for="inputUsername" class="form-label">userName </label>
+                    <input type="text" class="form-control" id="inputUsername"
+                        placeholder="enter userName">
+                        <p class="usarname-msg msg"></p>
+                </div>
+
+                <div class="col-12 col-lg-6  col-md-6  col-sm-6">
+                    <label for="inputPassword" class="form-label">password </label>
+                    <input type="password" class="form-control" id="inputPassword"
+                        placeholder="enter your password">
+                        <p class="password-msg msg"></p>
+
+                </div>
+            </div>
+
+            <div class="cancel-addmloyye-btn-div">
+                <button type="button" class="btn second-btn-cancel" id="cancel-btn">Cancel</button>
+                <button type="button" class="btn  add-embo-submit" id="add_btn">Add Employee</button>
+            </div>
+        </div>
+    </div>
+  </form>
+   
+  </div>
+<!-- editform -->
+
+
+<div class="edit-form-page">
+    <form action="" class="form-radius" >
+      <div class="card card-radius edit-card-hight">
+          <div class="card-header bg-white border-bottom-0 pt-4 d-flex justify-content-between">
+              <h3 class="header-common">Edit Employee</h3>
+              <button type="button" class="btn into-btn x_mark_cancel "><i class="fa-sharp fa-solid fa-xmark"></i></button>
+          </div>
+  
+    
+          <div class="card-body">
+  
+  
+              <div class="upload-img  edi-img  mb-3 ">
+                  <label for="update-edit-file" class="edit-l">
+                      <!-- <i class="fa-solid fa-upload "></i> -->
+                      <img src="image/download (4).jpg" alt="" id="edit-profile-pic">
+                      <div class="change-btn">
+                        <h4 class="h4-common text-center margin-const">Change</h4>
+                     
+                      </div>
+                   
+                      <!-- <h6 class="common-h6 text-center margin-const">PNG, JPG files are allowed</h6> -->
+                  </label>
+                  <input type="file" accept="image/jpeg, image/png, image/jpg"  id="update-edit-file" class="upload-img-d">
+              </div>
+  
+              <div class="row ">
+  
+                  <div class="col-5 col-lg-4 	col-md-4  col-sm-4 mb-1 ">
+                      <label for="edit_inputSalutation" class="form-label">Salutation</label>
+                      <select class="form-select" aria-label="Default select example " id="edit_inputSalutation">
+                          <option selected aria-placeholder="select"></option>
+                          <option value="Mr">Mr</option>
+                          <option value="Dr">Dr</option>
+                          <option value="Ms">Ms</option>
+                      </select>
+                      <p class="salu_edi_message  edit_msg"></p>
+                  </div>
+  
+                  <div class="col-7 col-lg-4 col-md-4 col-sm-8 ">
+                      <label for="edit_inputFirstname" class="form-label">First Name</label>
+                      <input type="text" class="form-control" id="edit_inputFirstname" placeholder="john">
+                      <p class="first_edi_message  edit_msg"></p>
+                  </div>
+  
+                  <div class="col-12 col-lg-4 	col-md-4 mb-1">
+                      <label for="edit_inputLastname" class="form-label">LastName</label>
+                      <input type="text" class="form-control" id="edit_inputLastname" placeholder="doe ">
+                      <p class="last_edi_message edit_msg"></p>
+                  </div>
+  
+              </div>
+  
+  
+              <div class=" row mb-3">
+                  <div class="col-12 col-lg-6  col-md-6 col-sm-6 mb-1">
+                      <label for="edit_inputEmail" class="form-label">Email Address </label>
+                      <input type="email" class="form-control" id="edit_inputEmail"
+                          placeholder="mail@simmmple.com">
+                          <p class="email_edi_message  edit_msg"></p>
+                  </div>
+  
+                  <div class="col-12 col-lg-6  col-md-6  col-sm-6">
+                      <label for="edit_inputMobile" class="form-label">Mobile Number </label>
+                      <input type="number" class="form-control" id="edit_inputMobile"
+                          placeholder="enter mobile number">
+                          <p class="phone_edi_message  edit_msg"></p>
+  
+                  </div>
+              </div>
+  
+  
+              <div class="row mb-3">
+                  <div class="col-12 col-lg-6  col-md-6  col-sm-6 mb-1">
+                      <label for="edit_inputdateofbirth" class="form-label">Date of Birth </label>
+                      <input type="date" class="form-control" id="edit_inputdateofbirth"
+                          placeholder="select date of birth">
+                          <p class="dob_edi_message  edit_msg"></p>
+  
+                  </div>
+  
+  
+  
+                  <div class="col-12 col-lg-6  col-md-6 col-sm-6">
+  
+                      <label for="" class="form-label">Gender</label>
+  
+                      <div class="row ">
+  
+                          <div class="col  p-2 d-flex gap-2">
+                             
+                              <div> <input  value="male" class="form-check-input" type="radio" name="gender"
+                                      id="edit_radiomale">
+                                  <label class="form-check-label" for="edit_radiomale" > Male</label>
+                              </div>
+  
+                              <div> <input   value="female" class="form-check-input" type="radio" name="gender"
+                                      id="edit_radiofemale">
+                                  <label class="form-check-label" for="edit_radiofemale"  > female</label>
+                              </div>
+                              <p class="gender_edi_message  edit_msg"></p>
+                          </div>
+  
+                      </div>
+  
+                  </div>
+              </div>
+                  
+              <div class="row">
+                    <div class="col">
+                      <label for="edit_inputquali" class="form-label">Qualifications </label>
+                      <input type="text" class="form-control" id="edit_inputquali" placeholder="enter address">
+                      <p class="quali_edi_message  edit_msg"></p>
+                  </div>
+  
+              </div>
+  
+              <div class="row mb-3">
+  
+                  <div class="col">
+                      <label for="edit_inputaddress " class="form-label">Address </label>
+                      <input type="text" class="form-control" id="edit_inputaddress" placeholder="enter address">
+                      <p class="address_edi_message  edit_msg"></p>
+                  </div>
+  
+              </div>
+  
+  
+  
+              <div class="row mb-3">
+  
+                  <div class="col-12 col-lg-6   col-md-6  col-sm-6 ">
+                      <label for="edit_select_country" class="form-label">Country </label>
+                      <select class="form-select" aria-label="Default select example " id="edit_select_country">
+                          <option selected></option>
+                          <option value="india">india</option>
+                          <option value="uk">uk</option>
+                          <option value="uae">uae</option>
+                      </select>
+                      <p class="country_edi_message  edit_msg"></p>
+  
+                  </div>
+  
+                  <div class="col-12 col-lg-6   col-md-6  col-sm-6">
+                      <label for="edit_select_state" class="form-label ">State </label>
+                      <select class="form-select" aria-label="Default select example " id="edit_select_state">
+                          <option selected =""></option>
+                          <option value="Tamilnadu">Tamilnadu</option>
+                          <option value="Kaenataka">Karnataka</option>
+                          <option value="Mumbai">Mumbai</option>
+                          <option value="delhi">Delhi</option>
+                      </select>
+                      <p class="state_edi_message  edit_msg"></p>
+  
+                  </div>
+  
+              </div>
+  
+              <div class="row mb-3">
+                  <div class="col-12 col-lg-6  col-md-6 col-sm-6 mb-1">
+                      <label for="edit_inputcity" class="form-label">City</label>
+                      <input type="text" class="form-control" id="edit_inputcity" placeholder="enter city">
+                      <p class="city_edi_message  edit_msg"></p>
+                  </div>
+  
+                  <div class=" col-lg-6  col-md-6 col-sm-6">
+  
+                      <label for="edit_inputpin" class="form-label">Pin/Zip </label>
+                      <input type="number" class="form-control" id="edit_inputpin" placeholder="enter zip/pin">
+                      <p class="pin_edi_message  edit_msg"></p>
+                  </div>
+              </div>
+              <div class=" row mb-3">
+                  <div class="col-12 col-lg-6  col-md-6 col-sm-6 mb-1">
+                      <label for="edit_inputUsername" class="form-label">userName </label>
+                      <input type="text" class="form-control" id="edit_inputUsername"
+                          placeholder="enter userName">
+                          <p class="username_edi_message  edit_msg"></p>
+                  </div>
+  
+                  <div class="col-12 col-lg-6  col-md-6  col-sm-6">
+                      <label for="edit_inputPassword" class="form-label">password </label>
+                      <input type="password" class="form-control" id="edit_inputPassword"
+                          placeholder="enter password">
+                          <p class="paasword_edi_message  edit_msg"></p>
+
+  
+                  </div>
+              </div>
+  
+              <div class="cancel-addmloyye-btn-div">
+                  <button type="button" class="btn edit_cancel_btn " id="cancel-btn">Cancel</button>
+                  <button type="button" class="btn edit_addemplye_btn" id="add_btn">Save Changes</button>
+              </div>
+          </div>
+      </div>
+    </form>
+
+  <!-- form end -->
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+   </div>
+</div>
+
+
+ <div class="delete-aler-box">
+    
+    <div class="delete-cont-and-btn">
+
+        <h3>Delete Employee</h3>
+        <button class="btn-delete"><i class="fa-solid fa-xmark"></i></button>
+    
+    </div>
+   
+    <div class="head5">  <h5>Are you sure you want to delete this employee?</h5></div>
+    <div class="cancel-delete">
+        <button type="button" class="btn btn-danger delete_employee_btn" >Delete</button>
+        <button type="button" class="btn btn-light  cancel_employee_btn">Cancel</button>
+    </div>
+
+ </div>
+
+
+
+   
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
